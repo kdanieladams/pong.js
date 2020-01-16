@@ -59,7 +59,7 @@ export class Pong {
             this.ball.velocity_x = this.ball.velocity_x * -1;
         }
         
-        if(this.ball.coord_x == this.player_2.coord_x - this.ball.width
+        if(this.ball.coord_x == this.player_2.coord_x - this.ball.radius
             && this.ball.coord_y >= this.player_2.coord_y 
             && this.ball.coord_y <= this.player_2.coord_y + this.player_2.height)
         {
