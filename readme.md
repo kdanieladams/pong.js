@@ -1,7 +1,7 @@
 # Pong.js
 ### by K. Daniel Adams
 
-This is pong for typescript.  It's a bit more regimented than other JS syntaxes, and particularly well-suited to handle OOP conventions.
+This is pong for typescript.  
 
 ## Usage
 1. Clone the project.
@@ -15,6 +15,6 @@ This is pong for typescript.  It's a bit more regimented than other JS syntaxes,
 ```
 3. Build and run the project.
 ```
-npm run build && npm start
+> npm run build && npm start
 ```
 4. Visit the appropriate url in the browser (defaults to http://localhost:3000).

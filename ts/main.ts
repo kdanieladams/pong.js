@@ -9,12 +9,8 @@ window.addEventListener('load', function(event){
     let canvas: HTMLCanvasElement = document.getElementById(canvasId) as HTMLCanvasElement;
     let pong = new Pong(canvas);
 
-    document.addEventListener('keydown', function(event){
-        pong.keydownHandler(event);
-    });
-    document.addEventListener('keyup', function(event){
-        pong.keyupHandler(event);
-    });
+    document.addEventListener('keydown', (event) => { pong.keydownHandler(event); });
+    document.addEventListener('keyup', (event) => { pong.keyupHandler(event); });
 
     this.setInterval(function(){
         pong.draw();

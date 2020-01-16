@@ -45,6 +45,9 @@ export class Pong {
 
         // draw ball
         this.ball.draw(this.ctx);
+
+        // TODO: handle scoring
+        // TODO: handle ball collision with paddle/player
     }
 
     keydownHandler(event: KeyboardEvent) {
@@ -82,8 +85,8 @@ export class Pong {
 
     start() {
         if(this.ball.velocity_x == 0) {
-            this.ball.velocity_x = 5;
-            this.ball.velocity_y = 2;
+            this.ball.velocity_x = Math.random() > 0.5 ? 5 : -5;
+            this.ball.velocity_y = Math.random() > 0.5 ? 2 : -2;
         }
     }
 }
