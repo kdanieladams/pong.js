@@ -42,6 +42,11 @@ export class Pong {
         this.ctx.strokeStyle = 'white';
         this.ctx.stroke();
 
+        // impossible to beat AI
+        let player_1_top = this.player_1.coord_y + 15,
+            player_1_bottom = this.player_1.coord_y + this.player_1.height - 15;
+        this.player_1.direction = this.ball.coord_y < player_1_top ? -1 : this.ball.coord_y > player_1_bottom ? 1 : 0;
+
         // draw players
         this.player_1.draw(this.ctx);
         this.player_2.draw(this.ctx);
@@ -75,12 +80,12 @@ export class Pong {
             case "ArrowDown":
                 this.player_2.direction = 1;
                 break;
-            case "KeyW":
-                this.player_1.direction = -1;
-                break;
-            case "KeyS":
-                this.player_1.direction = 1;
-                break;
+            // case "KeyW":
+            //     this.player_1.direction = -1;
+            //     break;
+            // case "KeyS":
+            //     this.player_1.direction = 1;
+            //     break;
             case "Space":
                 this.start();
                 break;
@@ -93,10 +98,10 @@ export class Pong {
             case "ArrowDown":
                 this.player_2.direction = 0;
                 break;
-            case "KeyW":
-            case "KeyS":
-                this.player_1.direction = 0;
-                break;
+            // case "KeyW":
+            // case "KeyS":
+            //     this.player_1.direction = 0;
+            //     break;
         }
     }
 

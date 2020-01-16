@@ -1,7 +1,7 @@
 # Pong.js
 ### by K. Daniel Adams
 
-This is pong in typescript.  There is no AI, both sides are human controlled. The left-side paddle is controlled with 'W' and 'S', the right-side paddle is controlled with the up-arrow and down-arrow.  Press spacebar to start the game.
+This is pong in typescript.  There is a crude AI implemented at the moment, which I will likely revise later.  The right-side paddle is controlled with the up-arrow and down-arrow.  Press spacebar to start the game.  I did not reference any other projects or guides to get this far, although I may need a reference for the finer points of pong (e.g. angular trajectory from a moving paddle, an AI which offers a decent challenge instead of just following the ball perfectly, drawing the score using squares so it  <a href="https://en.wikipedia.org/wiki/Pong" target="_blank">looks like it did on the old arcade cabinet</a>, etc.).
 
 ## Usage
 1. Clone the project.
