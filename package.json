@@ -1,0 +1,22 @@
+{
+  "name": "pong",
+  "version": "0.0.1",
+  "description": "It's pong in javascript",
+  "main": "pong.js",
+  "author": "K. Daniel Adams",
+  "license": "GPL-3.0",
+  "private": true,
+  "devDependencies": {
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
+    "webpack": "^4.41.5",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
+  },
+  "scripts": {
+    "test": "echo \"Warning: no test specified\" && exit 1",
+    "start": "node server.js",
+    "build": "webpack --config config/webpack.dev.js",
+    "build_prod": "webpack --config config/webpack.prod.js"
+  }
+}
