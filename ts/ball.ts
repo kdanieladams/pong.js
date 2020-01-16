@@ -21,13 +21,13 @@ export class Ball {
             maxX = ctx.canvas.width,
             minX = 0 - this.width;
 
-        if(!(this.coord_y >= maxY && this.velocity_y > 0)
-            || (this.coord_y <= minY && this.velocity_y < 0)) 
+        if(!((this.coord_y >= maxY && this.velocity_y > 0)
+            || (this.coord_y <= minY && this.velocity_y < 0)))
         {
             this.coord_y += this.velocity_y;
         }
         else {
-            // TODO: handle bounce off top and bottom walls...
+            this.velocity_y = this.velocity_y * -1;
         }
 
         if(!((this.coord_x >= maxX && this.velocity_x > 0)

@@ -47,7 +47,21 @@ export class Pong {
         this.ball.draw(this.ctx);
 
         // TODO: handle scoring
-        // TODO: handle ball collision with paddle/player
+
+        // handle ball collision with paddle/player
+        if(this.ball.coord_x == this.player_1.coord_x + this.player_1.width
+            && this.ball.coord_y >= this.player_1.coord_y 
+            && this.ball.coord_y <= this.player_1.coord_y + this.player_1.height)
+        {
+            this.ball.velocity_x = this.ball.velocity_x * -1;
+        }
+        
+        if(this.ball.coord_x == this.player_2.coord_x - this.ball.width
+            && this.ball.coord_y >= this.player_2.coord_y 
+            && this.ball.coord_y <= this.player_2.coord_y + this.player_2.height)
+        {
+            this.ball.velocity_x = this.ball.velocity_x * -1;
+        }
     }
 
     keydownHandler(event: KeyboardEvent) {
