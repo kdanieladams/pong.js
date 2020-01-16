@@ -11,8 +11,5 @@ window.addEventListener('load', function(event){
 
     document.addEventListener('keydown', (event) => { pong.keydownHandler(event); });
     document.addEventListener('keyup', (event) => { pong.keyupHandler(event); });
-
-    this.setInterval(function(){
-        pong.draw();
-    }, 1000 / fps);
+    this.setInterval(() => { pong.draw(); }, 1000 / fps);
 });
